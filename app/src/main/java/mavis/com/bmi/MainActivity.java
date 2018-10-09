@@ -34,7 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Your BMI is " + bmi, Toast.LENGTH_LONG).show();
         // 浮字出來  最後一定要show出來 charSequence 就是 String 的父類別
-        new AlertDialog.Builder(this).setMessage("Your BMI is" + bmi).setTitle("BMI").setPositiveButton("OK!",null).setNegativeButton("OK!", new DialogInterface.OnClickListener() {
+        new AlertDialog.Builder(this).setMessage("Your BMI is" + bmi)
+                .setTitle("BMI")
+                .setPositiveButton("OK!",null)
+                .setNegativeButton("Clear ! ", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 edWeight.setText("");
