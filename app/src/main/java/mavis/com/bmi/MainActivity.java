@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         float bmi = weight / (height + height);
         //改成浮點數
         Log.d("MainActivity", bmi + "");
+
+        Toast.makeText(this, "Your BMI is " + bmi, Toast.LENGTH_LONG).show();
+        // 最後一定要show出來 charSequence 就是 String 的父類別
 
     }
 }
