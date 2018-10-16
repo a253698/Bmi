@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                Log.d("MainActivity", "onClick:help");
-                new AlertDialog.Builder(MainActivity.this).setMessage("The body mass index (BMI) or Quetelet index is a value derived from the mass (weight) and height of an individual. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in meters.")
+                new AlertDialog.Builder(MainActivity.this).setMessage(R.string.bmi_info)
                         .setPositiveButton(R.string.ok, null).show();
             }
         });
