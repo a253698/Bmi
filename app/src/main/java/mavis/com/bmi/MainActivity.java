@@ -6,21 +6,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText edWeight;
+    private EditText edHeight;
+//    MyListener listener = new MyListener(); 寫一個類別new出來，這樣多了很多步驟。
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        edWeight = findViewById(R.id.ed_weight);
+        edHeight = findViewById(R.id.ed_height);
+        Button help = findViewById(R.id.help);
+        //不用類別寫出一個匿名類別
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("MainActivity", "onClick:help");
+            }
+        });
     }
 
     public void bmi(View view){
         Log.d("MainActivity" , "bmi");
-        final EditText edWeight = findViewById(R.id.ed_weight);
-        final EditText edHeight = findViewById(R.id.ed_height);
         //取得輸入方塊元件
         String w = edWeight.getText().toString();
         String h = edHeight.getText().toString();
