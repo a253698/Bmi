@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+//快速鍵，Alt + `  ，Git的快速鍵。
+//快速鍵，Ctrl + E，快速換頁面。
+
 public class MainActivity extends AppCompatActivity {
     private EditText edWeight;
     private EditText edHeight;
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                Log.d("MainActivity", "onClick:help");
                 new AlertDialog.Builder(MainActivity.this).setMessage("The body mass index (BMI) or Quetelet index is a value derived from the mass (weight) and height of an individual. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in meters.")
-                        .setPositiveButton("OK", null).show();
+                        .setPositiveButton(R.string.ok, null).show();
             }
         });
     }
@@ -51,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
         //改成浮點數
         Log.d("MainActivity", bmi + "");
 
-        Toast.makeText(this, "Your BMI is " + bmi, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.your_bmi_is) + bmi, Toast.LENGTH_LONG).show();
         // 浮字出來  最後一定要show出來 charSequence 就是 String 的父類別
-        new AlertDialog.Builder(this).setMessage("Your BMI is" + bmi)
+        new AlertDialog.Builder(this).setMessage(getString(R.string.your_bmi_is) + bmi)
                 .setTitle("BMI")
-                .setPositiveButton("OK!",null)
-                .setNegativeButton("Clear ! ", new DialogInterface.OnClickListener() {
+                .setPositiveButton(getString(R.string.ok),null)
+                .setNegativeButton(R.string.clear, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 edWeight.setText("");

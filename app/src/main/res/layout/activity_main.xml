@@ -13,7 +13,7 @@
         android:layout_marginBottom="448dp"
         android:layout_marginTop="8dp"
         android:fontFamily="casual"
-        android:text="Height :"
+        android:text="@string/height"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.052"
@@ -31,7 +31,7 @@
         android:ems="10"
         android:fontFamily="casual"
         android:inputType="numberDecimal"
-        android:text="type here ..."
+        android:text="@string/type_here"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/height" />
 
@@ -42,7 +42,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="casual"
-        android:text="Weight :"
+        android:text="@string/weight"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_height" />
@@ -57,7 +57,7 @@
         android:ems="10"
         android:fontFamily="casual"
         android:inputType="numberDecimal"
-        android:text="type here ..."
+        android:text="@string/type_here"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weight" />
 
@@ -69,7 +69,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="casual"
         android:onClick="bmi"
-        android:text="BMI"
+        android:text="@string/bmi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_weight" />
 
@@ -80,7 +80,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:fontFamily="casual"
-        android:text="Help"
+        android:text="@string/help"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
