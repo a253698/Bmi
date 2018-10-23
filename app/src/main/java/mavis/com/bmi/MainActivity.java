@@ -1,6 +1,7 @@
 package mavis.com.bmi;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,19 +55,23 @@ public class MainActivity extends AppCompatActivity {
         //改成浮點數
         Log.d("MainActivity", bmi + "");
 
-        Toast.makeText(this, getString(R.string.your_bmi_is) + bmi, Toast.LENGTH_LONG).show();
-        // 浮字出來  最後一定要show出來 charSequence 就是 String 的父類別
-        new AlertDialog.Builder(this).setMessage(getString(R.string.your_bmi_is) + bmi)
-                .setTitle("BMI")
-                .setPositiveButton(getString(R.string.ok),null)
-                .setNegativeButton(R.string.clear, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                edWeight.setText("");
-                edHeight.setText("");
-            }
-        }).show();
-        //跳視窗   support為支援，可以向下相容   builder為 alertDialog 專用
+        Intent intent = new Intent(this, ResultActivity.class);
+
+        startActivity(intent);
+        
+//        Toast.makeText(this, getString(R.string.your_bmi_is) + bmi, Toast.LENGTH_LONG).show();
+//        // 浮字出來  最後一定要show出來 charSequence 就是 String 的父類別
+//        new AlertDialog.Builder(this).setMessage(getString(R.string.your_bmi_is) + bmi)
+//                .setTitle("BMI")
+//                .setPositiveButton(getString(R.string.ok),null)
+//                .setNegativeButton(R.string.clear, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                edWeight.setText("");
+//                edHeight.setText("");
+//            }
+//        }).show();
+//        //跳視窗   support為支援，可以向下相容   builder為 alertDialog 專用
 
     }
 }
