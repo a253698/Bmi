@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra("BMI", bmi);
+        //放口香糖
         startActivity(intent);
 
 //        Toast.makeText(this, getString(R.string.your_bmi_is) + bmi, Toast.LENGTH_LONG).show();

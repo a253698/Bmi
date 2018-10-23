@@ -10,8 +10,10 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        //拿口香糖
         float bmi = getIntent().getFloatExtra("BMI", 0);
         TextView bmiResult = findViewById(R.id.bmiResult);
-        bmiResult.setText("Your BMI is" + bmi);
+        bmiResult.setText("Your BMI is " + bmi);
+        //顯示出BMI
     }
 }
