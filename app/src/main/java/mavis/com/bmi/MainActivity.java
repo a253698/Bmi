@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity", bmi + "");
 
         Intent intent = new Intent(this, ResultActivity.class);
-
+        intent.putExtra("BMI", bmi);
         startActivity(intent);
-        
+
 //        Toast.makeText(this, getString(R.string.your_bmi_is) + bmi, Toast.LENGTH_LONG).show();
 //        // 浮字出來  最後一定要show出來 charSequence 就是 String 的父類別
 //        new AlertDialog.Builder(this).setMessage(getString(R.string.your_bmi_is) + bmi)
